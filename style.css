@@ -17,9 +17,6 @@ body {
 	overflow: hidden;
 }
 
-.order-title {
-}
-
 .order-content {
 	width: 280px;
 	display: flex;
@@ -49,13 +46,10 @@ body {
 	padding: 3px;
 }
 
-.order-items {
-}
-
 .item-value {
 	width: 120px;
 	height: 25px;
-	margin: 2px 2px 5px -18px;
+	margin: 2px 2px 8px -18px;
 	padding-left: 22px;
 	background-color: #898121;
 	color: #ddd;
@@ -73,7 +67,7 @@ body {
 	width: 105px;
 	height: 25px;
 	background-color: #bdb345;
-	margin: 2px 1px 2px 1px;
+	margin: 4px 1px 4px 1px;
 	color: #fff;
 	padding-left: 10px;
 }
