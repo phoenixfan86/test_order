@@ -2,9 +2,11 @@ const pizzaSize = document.getElementById('itemsize')
 const prevSizeBtn = document.getElementById('prevsizebtn')
 const nextSizeBtn = document.getElementById('nextsizebtn')
 const pizzaExtraOne = document.getElementById('itemextra1')
-const pizzaExtraSecond = document.getElementById('itemextra2')
+const pizzaExtraTwo = document.getElementById('itemextra2')
 const prevExtraOneBtn = document.getElementById('prevextra-1-btn')
 const nextExtraOneBtn = document.getElementById('nextextra-1-btn')
+const prevExtraTwoBtn = document.getElementById('prevextra-2-btn')
+const nextExtraTwoBtn = document.getElementById('nextextra-2-btn')
 
 const size = [20, 25, 30, 35, 45]
 let currentSize = 0
@@ -21,14 +23,24 @@ nextSizeBtn.addEventListener('click', () => changeSize(1))
 
 // Зміна додаткових інгредієнтів
 const extras = ['Olives', 'Sausages', 'Corn', 'Tomatoes']
-let currentExtra = 0
+let currentExtraOne = 0
+let currentExtraTwo = 0
 
 // Функція для зміни додаткових інгредієнтів
-const changeExtras = direction => {
-	currentExtra = (currentExtra + direction + extras.length) % extras.length
-	pizzaExtraOne.innerHTML = extras[currentExtra]
+const changeExtraOne = direction => {
+	currentExtraOne =
+		(currentExtraOne + direction + extras.length) % extras.length
+	pizzaExtraOne.innerHTML = extras[currentExtraOne]
+}
+
+const changeExtraTwo = direction => {
+	currentExtraTwo =
+		(currentExtraTwo + direction + extras.length) % extras.length
+	pizzaExtraTwo.innerHTML = extras[currentExtraTwo]
 }
 
 // Додаємо обробники подій
-prevExtraOneBtn.addEventListener('click', () => changeExtras(-1))
-nextExtraOneBtn.addEventListener('click', () => changeExtras(1))
+prevExtraOneBtn.addEventListener('click', () => changeExtraOne(-1))
+nextExtraOneBtn.addEventListener('click', () => changeExtraOne(1))
+prevExtraTwoBtn.addEventListener('click', () => changeExtraTwo(-1))
+nextExtraTwoBtn.addEventListener('click', () => changeExtraTwo(1))
