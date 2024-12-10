@@ -36,6 +36,12 @@ body {
 	border-radius: 50%;
 }
 
+.order-info {
+	margin: 25px 0 25px 0;
+	color: #ddd;
+	width: 95%;
+}
+
 .order-items {
 	display: flex;
 	flex-direction: row;
