@@ -26,6 +26,7 @@ body {
 	background-color: #ffc75f;
 	border: 4px solid #ddd;
 	border-radius: 10px;
+	box-shadow: 1px 1px 15px -1px rgba(255, 215, 0, 0.8);
 }
 
 .order-img {
@@ -75,14 +76,20 @@ body {
 .prev-btn {
 	width: 25px;
 	height: 25px;
+	padding-left: 5px;
+	text-align: center;
 	background-color: #bdb345;
+	color: #ddd;
 	clip-path: polygon(55% 0, 100% 0%, 100% 100%, 55% 100%, 0 50%);
 }
 
 .next-btn {
 	width: 25px;
 	height: 25px;
+	padding-right: 5px;
+	text-align: center;
 	background-color: #bdb345;
+	color: #ddd;
 	clip-path: polygon(0% 0%, 55% 0, 100% 50%, 55% 100%, 0% 100%);
 }
 
@@ -98,7 +105,8 @@ body {
 }
 
 .cart-btn:hover {
-	box-shadow: 5px 5px 14px -1px rgba(26, 26, 26, 0.8);
+	box-shadow: 1px 1px 5px -1px rgba(26, 26, 26, 0.8);
+	transform: translate(-1px, -1px);
 }
 
 /*

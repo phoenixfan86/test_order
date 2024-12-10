@@ -1,30 +1,10 @@
-const button = document.querySelector('button')
-const toast = document.querySelector('.toast')
-const closeIcon = document.querySelector('.close')
-const progress = document.querySelector('.progress')
+const pizzaSize = document.getElementById('itemsize')
+const pizzaExtraOne = document.getElementById('itemextra1')
+const pizzaExtraSecond = document.getElementById('itemextra2')
 
-let timer1, timer2
+const size = [20, 25, 30]
+const extras = ['Olives', 'Sausages', 'Corn', 'Tomatoes']
 
-button.addEventListener('click', () => {
-	toast.classList.add('active')
-	progress.classList.add('active')
-
-	timer1 = setTimeout(() => {
-		toast.classList.remove('active')
-	}, 5000) //1s = 1000 milliseconds
-
-	timer2 = setTimeout(() => {
-		progress.classList.remove('active')
-	}, 5300)
-})
-
-closeIcon.addEventListener('click', () => {
-	toast.classList.remove('active')
-
-	setTimeout(() => {
-		progress.classList.remove('active')
-	}, 300)
-
-	clearTimeout(timer1)
-	clearTimeout(timer2)
-})
+pizzaSize.innerHTML = size[0]
+pizzaExtraOne.innerHTML = extras[0]
+pizzaExtraSecond.innerHTML = extras[1]
